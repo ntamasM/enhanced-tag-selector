@@ -1,0 +1,166 @@
+# Greek Translation for Enhanced Tag Selector
+# Copyright (C) 2025 Enhanced Tag Selector
+# This file is distributed under the same license as the Enhanced Tag Selector package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Enhanced Tag Selector 1.0.0\n"
+"Report-Msgid-Bugs-To: https://github.com/your-username/enhanced-tag-selector\n"
+"POT-Creation-Date: 2025-09-19 12:00+0000\n"
+"PO-Revision-Date: 2025-09-19 12:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: Greek\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Enhanced Tag Selector\n"
+
+#: includes/class-helper.php:66
+msgid "Select & Edit Tags"
+msgstr "Επιλογή & Επεξεργασία Ετικετών"
+
+#: includes/class-helper.php:67
+msgid "Alphabetical A-Z"
+msgstr "Αλφαβητικά Α-Ω"
+
+#: includes/class-helper.php:68
+msgid "Alphabetical Z-A"
+msgstr "Αλφαβητικά Ω-Α"
+
+#: includes/class-helper.php:69
+msgid "Least Used First"
+msgstr "Πιο Σπάνια Πρώτα"
+
+#: includes/class-helper.php:70
+msgid "Most Used First"
+msgstr "Πιο Συχνά Πρώτα"
+
+#: includes/class-helper.php:71
+msgid "Search tags..."
+msgstr "Αναζήτηση ετικετών..."
+
+#: includes/class-helper.php:72
+msgid "No tags found"
+msgstr "Δεν βρέθηκαν ετικέτες"
+
+#: includes/class-helper.php:73
+msgid "No tags selected for this post"
+msgstr "Δεν έχουν επιλεγεί ετικέτες για αυτό το άρθρο"
+
+#: includes/class-helper.php:74
+msgid "Close"
+msgstr "Κλείσιμο"
+
+#: includes/class-helper.php:74
+msgid "Clear search"
+msgstr "Καθαρισμός αναζήτησης"
+
+#: includes/class-helper.php:79
+msgid "Loading tags..."
+msgstr "Φόρτωση ετικετών..."
+
+#: includes/class-helper.php:81
+msgid "No tags assigned to this post"
+msgstr "Δεν έχουν ανατεθεί ετικέτες σε αυτό το άρθρο"
+
+#: includes/class-helper.php:84
+msgid "Current Post Tags"
+msgstr "Τρέχουσες Ετικέτες Άρθρου"
+
+#: includes/class-helper.php:86
+msgid "Add New Tag"
+msgstr "Προσθήκη Νέας Ετικέτας"
+
+#: includes/class-helper.php:87
+msgid "Create & Add"
+msgstr "Δημιουργία & Προσθήκη"
+
+#: includes/class-helper.php:88
+msgid "Enter new tag name(s), separated by commas..."
+msgstr "Εισάγετε νέο όνομα ετικέτας/ετικετών, διαχωρισμένα με κόμματα..."
+
+#: includes/class-helper.php:89
+msgid "Search existing tags..."
+msgstr "Αναζήτηση υπαρχουσών ετικετών..."
+
+#: includes/class-helper.php:90
+msgid "Sort by:"
+msgstr "Ταξινόμηση:"
+
+#: templates/modal-template.php:21
+msgid "Select & Edit Tags"
+msgstr "Επιλογή & Επεξεργασία Ετικετών"
+
+#: templates/modal-template.php:23
+msgid "Close"
+msgstr "Κλείσιμο"
+
+#: templates/modal-template.php:32
+msgid "Add New Tag"
+msgstr "Προσθήκη Νέας Ετικέτας"
+
+#: templates/modal-template.php:38
+msgid "Enter new tag name(s), separated by commas..."
+msgstr "Εισάγετε νέο όνομα ετικέτας/ετικετών, διαχωρισμένα με κόμματα..."
+
+#: templates/modal-template.php:41
+msgid "Create & Add"
+msgstr "Δημιουργία & Προσθήκη"
+
+#: templates/modal-template.php:54
+msgid "Search existing tags..."
+msgstr "Αναζήτηση υπαρχουσών ετικετών..."
+
+#: templates/modal-template.php:62
+msgid "Sort by:"
+msgstr "Ταξινόμηση:"
+
+#: templates/modal-template.php:65
+msgid "Most Used First"
+msgstr "Πιο Συχνά Πρώτα"
+
+#: templates/modal-template.php:66
+msgid "Least Used First"
+msgstr "Πιο Σπάνια Πρώτα"
+
+#: templates/modal-template.php:67
+msgid "Alphabetical A-Z"
+msgstr "Αλφαβητικά Α-Ω"
+
+#: templates/modal-template.php:68
+msgid "Alphabetical Z-A"
+msgstr "Αλφαβητικά Ω-Α"
+
+#: templates/modal-template.php:75
+msgid "Loading tags..."
+msgstr "Φόρτωση ετικετών..."
+
+#: templates/modal-template.php:82
+msgid "Selected Tags"
+msgstr "Επιλεγμένες Ετικέτες"
+
+#: templates/modal-template.php:104
+msgid "Current Post Tags"
+msgstr "Τρέχουσες Ετικέτες Άρθρου"
+
+#: templates/modal-template.php:109
+msgid "No tags assigned to this post"
+msgstr "Δεν έχουν ανατεθεί ετικέτες σε αυτό το άρθρο"
+
+#: includes/class-helper.php:102
+msgid "Select a tag"
+msgstr "Επιλέξτε μια ετικέτα"
+
+#: includes/class-helper.php:103
+msgid "Use the search box to find specific tags or change the sorting order to organize how tags are displayed."
+msgstr "Χρησιμοποιήστε το πεδίο αναζήτησης για να βρείτε συγκεκριμένες ετικέτες ή αλλάξτε τη σειρά ταξινόμησης για να οργανώσετε πώς εμφανίζονται οι ετικέτες."
+
+#: includes/class-helper.php:104
+msgid "Create and add new tags that don't exist yet. Enter tag names separated by commas."
+msgstr "Δημιουργήστε και προσθέστε νέες ετικέτες που δεν υπάρχουν ακόμη. Εισάγετε ονόματα ετικετών διαχωρισμένα με κόμματα."
+
+#: includes/class-helper.php:105
+msgid "Tags currently assigned to this post. You can remove tags by clicking the × button next to each tag."
+msgstr "Ετικέτες που είναι τώρα ανατεθειμένες σε αυτό το άρθρο. Μπορείτε να αφαιρέσετε ετικέτες κάνοντας κλικ στο κουμπί × δίπλα σε κάθε ετικέτα."

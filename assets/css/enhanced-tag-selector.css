@@ -1,0 +1,978 @@
+/* Enhanced Tag Selector Styles */
+
+/* Icons */
+.ets-icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 6px;
+  vertical-align: middle;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+}
+
+/* Icon definitions using Unicode symbols */
+.ets-icon-search::before {
+  content: "🔍";
+}
+.ets-icon-clear::before {
+  content: "✕";
+}
+.ets-icon-sort::before {
+  content: "↕️";
+}
+.ets-icon-tags::before {
+  content: "🏷️";
+}
+.ets-icon-tag::before {
+  content: "🏷️";
+}
+.ets-icon-plus::before {
+  content: "➕";
+}
+.ets-icon-plus-circle::before {
+  content: "⊕";
+}
+.ets-icon-close::before {
+  content: "✕";
+}
+.ets-icon-check-circle::before {
+  content: "✓";
+}
+.ets-icon-trash::before {
+  content: "🗑️";
+}
+.ets-icon-save::before {
+  content: "💾";
+}
+.ets-icon-document::before {
+  content: "📄";
+}
+.ets-icon-info::before {
+  content: "ℹ️";
+}
+.ets-icon-filter::before {
+  content: "🔽";
+}
+.ets-icon-loading::before {
+  content: "⟳";
+  animation: etsIconSpin 1s linear infinite;
+}
+
+@keyframes etsIconSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Modal Overlay */
+.ets-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 100000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Modal Content */
+.ets-modal-content {
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 700px;
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  animation: etsModalSlideIn 0.3s ease-out;
+}
+
+@keyframes etsModalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Modal Header */
+.ets-modal-header {
+  padding: 10px 15px;
+  border-bottom: 1px solid #e1e1e1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f8f9fa;
+  border-radius: 4px 4px 0 0;
+}
+
+.ets-modal-header h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.ets-close {
+  font-size: 20px;
+  font-weight: bold;
+  color: #999;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.ets-close .ets-icon {
+  margin: 0;
+  font-size: 18px;
+}
+
+.ets-close:hover,
+.ets-close:focus {
+  color: #666;
+  background: #e9ecef;
+}
+
+/* Modal Body */
+.ets-modal-body {
+  padding: 15px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+/* Universal Section Styling */
+.ets-new-tag-section,
+.ets-controls-section,
+.ets-current-tags-section {
+  margin-bottom: 15px;
+  border: 1px solid #e1e5e9;
+  border-radius: 6px;
+  background: #fafbfc;
+}
+
+.ets-section-header {
+  padding: 12px 15px 8px 15px;
+  border-bottom: 1px solid #e9ecef;
+  background: #f8f9fa;
+  border-radius: 6px 6px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ets-section-header h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #2c3e50;
+  display: flex;
+  align-items: center;
+}
+
+.ets-section-header .ets-icon {
+  margin-right: 8px;
+  color: #0073aa;
+}
+
+/* Tooltip styling */
+.ets-tooltip-trigger {
+  position: relative;
+  margin-left: 8px;
+  cursor: help;
+}
+
+.ets-tooltip-trigger .ets-icon {
+  margin-right: 0;
+  color: #6c757d;
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.ets-tooltip-trigger:hover .ets-icon {
+  color: #0073aa;
+}
+
+.ets-tooltip-trigger::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #2c3e50;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  line-height: 1.4;
+  max-width: 300px;
+  white-space: normal;
+  word-wrap: break-word;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  margin-top: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  width: max-content;
+}
+
+.ets-tooltip-trigger::before {
+  content: "";
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-bottom-color: #2c3e50;
+  z-index: 1001;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.ets-tooltip-trigger:hover::after,
+.ets-tooltip-trigger:hover::before {
+  opacity: 1;
+  visibility: visible;
+}
+
+.ets-section-explanation {
+  margin: 0;
+  font-size: 13px;
+  color: #6c757d;
+  line-height: 1.4;
+  font-style: italic;
+}
+
+.ets-section-content {
+  padding: 15px;
+}
+
+/* Controls specific styling */
+.ets-controls {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* Tags Container within controls section */
+.ets-tags-container {
+  max-height: 300px;
+  overflow-y: auto;
+  margin-top: 15px;
+  border-top: 1px solid #e9ecef;
+  padding-top: 15px;
+}
+
+/* Enhanced Search Area */
+.ets-search-area {
+  flex: 2;
+  min-width: 250px;
+}
+
+.ets-search-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border: 2px solid #e1e5e9;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.ets-search-wrapper:focus-within {
+  border-color: #0073aa;
+  box-shadow: 0 0 0 3px rgba(0, 115, 170, 0.1);
+}
+
+.ets-search-wrapper .ets-icon-search {
+  position: absolute;
+  left: 12px;
+  color: #666;
+  pointer-events: none;
+  z-index: 1;
+}
+
+#ets-search {
+  width: 100%;
+  padding: 8px 12px 8px 30px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  background: transparent;
+  outline: none;
+}
+
+.ets-search-clear {
+  position: absolute;
+  right: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 50%;
+  color: #999;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+}
+
+.ets-search-clear:hover {
+  background: #f0f0f0;
+  color: #666;
+}
+
+.ets-search-clear .ets-icon {
+  margin: 0;
+  font-size: 12px;
+}
+
+.ets-sort-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+}
+
+.ets-sort-container label {
+  font-weight: 500;
+  color: #555;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.ets-sort-container .ets-icon {
+  margin-right: 4px;
+}
+
+/* Input Styles */
+#ets-sort {
+  padding: 8px 12px;
+  border: 2px solid #e1e5e9;
+  border-radius: 4px;
+  font-size: 14px;
+  background: white;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+  flex: 1;
+}
+
+#ets-sort:focus {
+  outline: none;
+  border-color: #0073aa;
+}
+
+/* Tags Container */
+.ets-tags-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+  overflow-y: auto;
+  padding-block: 8px;
+}
+
+/* Tag Items */
+.ets-tag-item {
+  padding: 8px 12px;
+  background: #f8f9fa;
+  border: 2px solid #e9ecef;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.ets-tag-item:hover {
+  background: #e3f2fd;
+  border-color: #2196f3;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(33, 150, 243, 0.15);
+}
+
+.ets-tag-item:active {
+  transform: translateY(0);
+}
+
+.ets-tag-name {
+  font-weight: 500;
+  color: #2c3e50;
+  flex: 1;
+  margin-right: 8px;
+}
+
+.ets-tag-count {
+  color: #666;
+  font-size: 12px;
+  background: #e9ecef;
+  padding: 3px 6px;
+  border-radius: 8px;
+  min-width: 30px;
+  text-align: center;
+}
+
+.ets-tag-item:hover .ets-tag-count {
+  background: #bbdefb;
+  color: #1976d2;
+}
+
+/* Loading and Error States */
+.ets-loading,
+.ets-error,
+.ets-no-tags {
+  text-align: center;
+  padding: 20px 10px;
+  color: #666;
+  font-style: italic;
+}
+
+.ets-loading {
+  position: relative;
+}
+
+.ets-loading::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+  border: 2px solid #e1e5e9;
+  border-top: 2px solid #0073aa;
+  border-radius: 50%;
+  animation: etsSpinner 1s linear infinite;
+}
+
+@keyframes etsSpinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.ets-error {
+  color: #d32f2f;
+  background: #ffebee;
+  border: 1px solid #ffcdd2;
+  border-radius: 4px;
+}
+
+.ets-no-tags {
+  color: #757575;
+  background: #f5f5f5;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+}
+
+/* Feedback Messages */
+.ets-feedback {
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  animation: etsFeedbackSlideIn 0.3s ease-out;
+}
+
+@keyframes etsFeedbackSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.ets-feedback-success {
+  background: #e8f5e8;
+  color: #2e7d32;
+  border: 1px solid #c8e6c9;
+}
+
+.ets-feedback-error {
+  background: #ffebee;
+  color: #d32f2f;
+  border: 1px solid #ffcdd2;
+}
+
+.ets-feedback-warning {
+  background: #fff3e0;
+  color: #ef6c00;
+  border: 1px solid #ffcc02;
+}
+
+/* Trigger Link Styling */
+.ets-trigger {
+  color: #0073aa !important;
+  text-decoration: none !important;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.ets-trigger:hover,
+.ets-trigger:focus {
+  color: #005a87 !important;
+  text-decoration: underline !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .ets-modal-content {
+    width: 95%;
+    max-height: 90vh;
+    margin: 15px;
+  }
+
+  .ets-modal-header,
+  .ets-modal-body {
+    padding: 15px;
+  }
+
+  .ets-section-header {
+    padding: 10px 12px 6px 12px;
+  }
+
+  .ets-section-header h4 {
+    font-size: 15px;
+  }
+
+  /* Responsive tooltip adjustments */
+  .ets-tooltip-trigger::after {
+    max-width: 250px;
+    left: auto;
+    right: 0;
+    transform: none;
+  }
+
+  .ets-tooltip-trigger::before {
+    left: auto;
+    right: 15px;
+    transform: none;
+  }
+
+  .ets-section-explanation {
+    font-size: 12px;
+  }
+
+  .ets-section-content {
+    padding: 12px;
+  }
+
+  .ets-controls {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .ets-search-area {
+    order: 1;
+    min-width: auto;
+  }
+
+  .ets-sort-container {
+    order: 2;
+    justify-content: space-between;
+    min-width: auto;
+  }
+
+  .ets-new-tag-input {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .ets-create-tag-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .ets-tags-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .ets-modal-header h3 {
+    font-size: 16px;
+  }
+
+  .ets-tag-item {
+    padding: 10px 15px;
+  }
+
+  .ets-controls {
+    gap: 10px;
+  }
+}
+
+/* Tag Items Styling for Already Added Tags */
+.ets-tag-item.ets-tag-added {
+  background: #28a745;
+  border-color: #1e7e34;
+  color: white;
+}
+
+.ets-tag-item.ets-tag-added:hover {
+  background: #218838;
+  border-color: #1c7430;
+}
+
+.ets-tag-item.ets-tag-added .ets-tag-name {
+  color: white;
+}
+
+.ets-tag-item.ets-tag-added .ets-tag-count {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+/* Current Post Tags Styling */
+@media (max-width: 768px) {
+  .ets-selected-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+}
+
+/* New Tag Creation Section */
+.ets-new-tag-section {
+  margin-bottom: 15px;
+}
+
+.ets-new-tag-header h4 {
+  margin: 0 0 10px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #2c3e50;
+  display: flex;
+  align-items: center;
+}
+
+.ets-new-tag-input {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.ets-input-wrapper {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.ets-input-wrapper .ets-icon {
+  position: absolute;
+  left: 12px;
+  color: #666;
+  pointer-events: none;
+  z-index: 1;
+}
+
+#ets-new-tag {
+  width: 100%;
+  padding: 10px 15px 10px 35px;
+  border: 2px solid #e1e5e9;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#ets-new-tag:focus {
+  outline: none;
+  border-color: #0073aa;
+  box-shadow: 0 0 0 3px rgba(0, 115, 170, 0.1);
+}
+
+.ets-create-tag-btn {
+  background: #0073aa;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+}
+
+.ets-create-tag-btn:hover {
+  background: #005a87;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 115, 170, 0.3);
+}
+
+.ets-create-tag-btn:active {
+  transform: translateY(0);
+}
+
+/* Current Post Tags */
+.ets-current-post-tags {
+  background: #fff8e1;
+  border: 2px dashed #ffb74d;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.ets-no-current {
+  text-align: center;
+  color: #8d6e63;
+  font-style: italic;
+  margin: 4px 0;
+  font-size: 13px;
+}
+
+.ets-current-tags-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.ets-current-tag-item {
+  background: #ff9800;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  animation: etsCurrentTagSlideIn 0.3s ease-out;
+}
+
+@keyframes etsCurrentTagSlideIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.ets-current-tag-name {
+  flex: 1;
+}
+
+.ets-remove-current-tag {
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 0 3px;
+  border-radius: 50%;
+  transition: background-color 0.2s ease;
+}
+
+.ets-remove-current-tag:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Enhanced responsive design for new elements */
+@media (max-width: 768px) {
+  .ets-new-tag-input {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .ets-create-tag-btn {
+    width: 100%;
+  }
+
+  .ets-current-tags-grid {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .ets-new-tag-section {
+    margin-top: 15px;
+    padding-top: 10px;
+  }
+
+  .ets-current-tags-section {
+    margin-top: 15px;
+    padding-top: 10px;
+  }
+
+  .ets-current-post-tags {
+    padding: 8px;
+  }
+}
+
+.ets-main-button-container {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.ets-select-tags-btn {
+  background: linear-gradient(135deg, #0073aa 0%, #005a87 100%);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 115, 170, 0.3);
+  min-width: 200px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.ets-select-tags-btn:hover {
+  background: linear-gradient(135deg, #005a87 0%, #004a73 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 115, 170, 0.4);
+}
+
+.ets-select-tags-btn:active {
+  transform: translateY(0);
+}
+
+.ets-select-tags-btn .ets-icon {
+  font-size: 18px;
+}
+
+.ets-current-tags-display {
+  min-height: 50px;
+  background: white;
+  border: 2px dashed #dee2e6;
+  border-radius: 4px;
+  padding: 8px;
+  text-align: center;
+}
+
+.ets-no-tags-message {
+  color: #6c757d;
+  font-style: italic;
+  margin: 0;
+  padding: 8px 0;
+}
+
+.ets-custom-tags-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.ets-custom-tag-chip {
+  background: #007cba;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  display: inline-block;
+  animation: etsTagChipSlideIn 0.3s ease-out;
+}
+
+@keyframes etsTagChipSlideIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Hide WordPress default tag interface elements completely */
+#tagsdiv-post_tag .jaxtag,
+#tagsdiv-post_tag .howto,
+#tagsdiv-post_tag #tagchecklist,
+#tagsdiv-post_tag .tagcloud-link,
+#tagsdiv-post_tag .ajaxtag,
+#tagsdiv-post_tag .newtag,
+#tagsdiv-post_tag .tagadd,
+#tagsdiv-post_tag .inside > p,
+#tagsdiv-post_tag .inside > div:not(.ets-custom-interface),
+.postbox#tagsdiv-post_tag .inside > *:not(.ets-custom-interface) {
+  display: none !important;
+}
+
+/* Ensure our custom interface is always visible */
+.ets-custom-interface {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Responsive design for custom interface */
+@media (max-width: 768px) {
+  .ets-custom-interface {
+    padding: 15px;
+  }
+
+  .ets-select-tags-btn {
+    padding: 10px 20px;
+    font-size: 15px;
+    min-width: 180px;
+  }
+
+  .ets-custom-tags-grid {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .ets-custom-interface {
+    padding: 10px;
+  }
+
+  .ets-select-tags-btn {
+    padding: 10px 15px;
+    font-size: 14px;
+    min-width: 160px;
+    width: 100%;
+  }
+
+  .ets-main-button-container {
+    margin-bottom: 10px;
+  }
+
+  .ets-current-tags-display {
+    padding: 8px;
+  }
+}

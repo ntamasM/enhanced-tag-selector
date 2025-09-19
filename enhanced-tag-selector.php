@@ -1,0 +1,77 @@
+<?php
+
+/**
+ * Plugin Name: Enhanced Tag Selector
+ * Plugin URI: https://github.com/your-username/enhanced-tag-selector
+ * Description: Replaces the default "Choose from the most used tags" with an enhanced tag selector featuring sorting options and intelligent selection management.
+ * Version: 0.0.1
+ * Author: Ntamas
+ * License: GPL v2 or later
+ * License URI: https://www.gnu.org/licenses/gpl-2.0.html
+ * Text Domain: enhanced-tag-selector
+ */
+
+// Prevent direct access
+if (!defined('ABSPATH')) {
+    exit;
+}
+
+// Define plugin constants
+define('ETS_VERSION', '0.0.1');
+define('ETS_PLUGIN_URL', plugin_dir_url(__FILE__));
+define('ETS_PLUGIN_PATH', plugin_dir_path(__FILE__));
+
+// Include helper classes
+require_once ETS_PLUGIN_PATH . 'includes/class-helper.php';
+
+class Enhanced_Tag_Selector
+{
+
+    public function __construct()
+    {
+        add_action('plugins_loaded', array($this, 'load_textdomain'));
+        add_action('init', array($this, 'init'));
+    }
+
+    public function load_textdomain()
+    {
+        // Load plugin text domain for translations
+        $loaded = load_plugin_textdomain('enhanced-tag-selector', false, dirname(plugin_basename(__FILE__)) . '/languages/');
+
+        // Debug: Log translation loading
+        if (defined('WP_DEBUG') && WP_DEBUG) {
+            error_log('Enhanced Tag Selector: Text domain loaded: ' . ($loaded ? 'YES' : 'NO'));
+            error_log('Enhanced Tag Selector: Current locale: ' . get_locale());
+            error_log('Enhanced Tag Selector: Languages path: ' . dirname(plugin_basename(__FILE__)) . '/languages/');
+
+            // Test a translation
+            $test_translation = __('Select & Edit Tags', 'enhanced-tag-selector');
+            error_log('Enhanced Tag Selector: Test translation result: ' . $test_translation);
+        }
+    }
+
+    public function init()
+    {
+        // Hook into admin to replace default tag functionality
+        add_action('admin_enqueue_scripts', array('ETS_Helper', 'enqueue_admin_assets'));
+        add_action('wp_ajax_ets_get_tags', array('ETS_Helper', 'ajax_get_tags'));
+        add_action('admin_footer', array($this, 'add_enhanced_tag_selector'));
+
+        // Don't remove the tag metabox - let WordPress handle it normally
+        // Our JavaScript will add the enhanced functionality to the existing metabox
+    }
+    /**
+     * Add the enhanced tag selector to the admin footer
+     */
+    public function add_enhanced_tag_selector()
+    {
+        if (!ETS_Helper::should_show_selector()) {
+            return;
+        }
+
+        ETS_Helper::get_modal_template();
+    }
+}
+
+// Initialize the plugin
+new Enhanced_Tag_Selector();
