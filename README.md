@@ -43,7 +43,7 @@ Your support helps maintain and improve this open-source project!
    - Click "Activate Plugin" after installation
    - Or go to `Plugins > Installed Plugins`, find "Enhanced Tag Selector", and click "Activate"
 
-   **Alternative for developers**: You can also clone this repository directly to your `wp-content/plugins/` directory if you want the development version.
+**Alternative for developers**: You can also clone this repository directly to your `wp-content/plugins/` directory if you want the development version.
 
 ## Usage
 
