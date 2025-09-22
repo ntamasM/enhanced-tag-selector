@@ -26,16 +26,24 @@ Your support helps maintain and improve this open-source project!
 
 ## Installation
 
-1. Download or clone this plugin to your WordPress plugins directory:
+1. Download the latest version from the [GitHub Releases](https://github.com/ntamasM/enhanced-tag-selector/releases) page:
 
-   ```
-   wp-content/plugins/enhanced-tag-selector/
-   ```
+   - Go to the releases page
+   - Download the newest version (`.zip` file)
 
-2. Activate the plugin through the WordPress admin:
-   - Go to `Plugins > Installed Plugins`
-   - Find "Enhanced Tag Selector"
-   - Click "Activate"
+2. Install the plugin through WordPress admin:
+
+   - Go to `Plugins > Add New`
+   - Click "Upload Plugin"
+   - Choose the downloaded `.zip` file
+   - Click "Install Now"
+
+3. Activate the plugin:
+
+   - Click "Activate Plugin" after installation
+   - Or go to `Plugins > Installed Plugins`, find "Enhanced Tag Selector", and click "Activate"
+
+   **Alternative for developers**: You can also clone this repository directly to your `wp-content/plugins/` directory if you want the development version.
 
 ## Usage
 
