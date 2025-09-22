@@ -44,7 +44,3 @@ It’s namespaced and lightweight. If you see issues, please open a support tick
 == Changelog ==
 = 0.0.1 =
 * Initial release.
-
-== Upgrade Notice ==
-= 1.0.1 =
-No upgrade steps yet. Future releases may add custom taxonomy support.
