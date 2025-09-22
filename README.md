@@ -217,7 +217,7 @@ Types of contributions welcome:
 
 ## License
 
-This plugin is licensed under the GPL v2 or later.
+This plugin is licensed under the GPL v2.
 
 ## Support
 
