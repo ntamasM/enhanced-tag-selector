@@ -1,10 +1,10 @@
 === Enhanced Tag Selector ===
-Contributors: your-wporg-username
+Contributors: ntamas
 Tags: tags, editor, post editor, taxonomy, modal, ui, admin
 Requires at least: 6.0
 Tested up to: 6.6
 Requires PHP: 7.4
-Stable tag: 1.0.0
+Stable tag: 0.0.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -42,7 +42,7 @@ It’s namespaced and lightweight. If you see issues, please open a support tick
 2. Searching and selecting tags without duplicates.
 
 == Changelog ==
-= 1.0.0 =
+= 0.0.1 =
 * Initial release.
 
 == Upgrade Notice ==
