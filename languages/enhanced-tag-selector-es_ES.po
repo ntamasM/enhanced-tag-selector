@@ -21,6 +21,10 @@ msgstr ""
 msgid "Select & Edit Tags"
 msgstr "Seleccionar y Editar Etiquetas"
 
+#: enhanced-tag-selector.php:84
+msgid "♥ Support Me"
+msgstr "♥ Apóyame"
+
 #: includes/class-helper.php:67
 msgid "Alphabetical A-Z"
 msgstr "Alfabético A-Z"
@@ -57,6 +61,46 @@ msgstr "Cerrar"
 msgid "Clear search"
 msgstr "Limpiar búsqueda"
 
+#: includes/class-helper.php:76
+msgid "Loading tags..."
+msgstr "Cargando etiquetas..."
+
+#: includes/class-helper.php:77
+msgid "No tags assigned to this post"
+msgstr "No hay etiquetas asignadas a este post"
+
+#: includes/class-helper.php:84
+msgid "Current Post Tags"
+msgstr "Etiquetas del Post Actual"
+
+#: includes/class-helper.php:86
+msgid "Add New Tag"
+msgstr "Añadir Nueva Etiqueta"
+
+#: includes/class-helper.php:87
+msgid "Create & Add"
+msgstr "Crear y Añadir"
+
+#: includes/class-helper.php:88
+msgid "Enter new tag name(s), separated by commas..."
+msgstr "Introduce el nombre de la nueva etiqueta, separadas por comas..."
+
+#: includes/class-helper.php:89
+msgid "Search existing tags..."
+msgstr "Buscar etiquetas existentes..."
+
+#: includes/class-helper.php:90
+msgid "Sort by:"
+msgstr "Ordenar por:"
+
+#: templates/modal-template.php:21
+msgid "Select & Edit Tags"
+msgstr "Seleccionar y Editar Etiquetas"
+
+#: templates/modal-template.php:23
+msgid "Close"
+msgstr "Cerrar"
+
 #: templates/modal-template.php:32
 msgid "Add New Tag"
 msgstr "Añadir Nueva Etiqueta"
@@ -76,6 +120,22 @@ msgstr "Buscar etiquetas existentes..."
 #: templates/modal-template.php:62
 msgid "Sort by:"
 msgstr "Ordenar por:"
+
+#: templates/modal-template.php:65
+msgid "Most Used First"
+msgstr "Más Usadas Primero"
+
+#: templates/modal-template.php:66
+msgid "Least Used First"
+msgstr "Menos Usadas Primero"
+
+#: templates/modal-template.php:67
+msgid "Alphabetical A-Z"
+msgstr "Alfabético A-Z"
+
+#: templates/modal-template.php:68
+msgid "Alphabetical Z-A"
+msgstr "Alfabético Z-A"
 
 #: templates/modal-template.php:75
 msgid "Loading tags..."

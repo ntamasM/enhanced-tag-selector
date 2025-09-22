@@ -16,6 +16,14 @@ A WordPress plugin that replaces the default "Choose from the most used tags" fu
 - **Modern UI**: Clean, intuitive interface with smooth animations
 - **Multilingual Support**: Full internationalization with built-in translations for Greek, Spanish, French, and German
 
+## Support the Project
+
+If you find this plugin helpful, please consider supporting its development:
+
+[![Support Me](https://img.shields.io/badge/Support-♥-red?style=for-the-badge)](https://ntamadakis.gr/support-me)
+
+Your support helps maintain and improve this open-source project!
+
 ## Installation
 
 1. Download or clone this plugin to your WordPress plugins directory:
@@ -173,11 +181,21 @@ Future versions may include filters for:
 
 ### Contributing
 
-1. Fork the repository
+This is an open-source project! We welcome contributions:
+
+1. Fork the [repository](https://github.com/ntamasM/enhanced-tag-selector)
 2. Create a feature branch
 3. Make your changes
 4. Test thoroughly
 5. Submit a pull request
+
+Types of contributions welcome:
+
+- 🐛 Bug fixes
+- ✨ New features
+- 📚 Documentation improvements
+- 🌍 Translations
+- 🎨 UI/UX enhancements
 
 ## Changelog
 
@@ -195,11 +213,24 @@ This plugin is licensed under the GPL v2 or later.
 
 ## Support
 
-For support, please create an issue on the GitHub repository or contact the plugin author.
+For technical support and bug reports, please create an issue on the [GitHub repository](https://github.com/ntamasM/enhanced-tag-selector).
+
+### Support the Development
+
+If you find this plugin useful and want to support its continued development:
+
+🎯 **[Support Me](https://ntamadakis.gr/support-me)** - Help keep this project alive!
+
+Your contribution helps:
+
+- 🚀 Add new features
+- 🐛 Fix bugs faster
+- 📚 Improve documentation
+- 🌍 Add more language translations
 
 ---
 
-**Author**: Your Name  
-**Version**: 1.0.0  
+**Author**: [Ntamas](https://ntamadakis.gr)  
+**Version**: 0.0.1  
 **WordPress Compatibility**: 5.0+  
 **PHP Compatibility**: 7.4+

@@ -21,6 +21,10 @@ msgstr ""
 msgid "Select & Edit Tags"
 msgstr "Sélectionner et Modifier les Étiquettes"
 
+#: enhanced-tag-selector.php:84
+msgid "♥ Support Me"
+msgstr "♥ Soutenez-moi"
+
 #: includes/class-helper.php:67
 msgid "Alphabetical A-Z"
 msgstr "Alphabétique A-Z"
@@ -57,6 +61,46 @@ msgstr "Fermer"
 msgid "Clear search"
 msgstr "Effacer la recherche"
 
+#: includes/class-helper.php:76
+msgid "Loading tags..."
+msgstr "Chargement des étiquettes..."
+
+#: includes/class-helper.php:77
+msgid "No tags assigned to this post"
+msgstr "Aucune étiquette assignée à ce post"
+
+#: includes/class-helper.php:84
+msgid "Current Post Tags"
+msgstr "Étiquettes du Post Actuel"
+
+#: includes/class-helper.php:86
+msgid "Add New Tag"
+msgstr "Ajouter Nouvelle Étiquette"
+
+#: includes/class-helper.php:87
+msgid "Create & Add"
+msgstr "Créer et Ajouter"
+
+#: includes/class-helper.php:88
+msgid "Enter new tag name(s), separated by commas..."
+msgstr "Entrez le nom de la nouvelle étiquette, séparées par des virgules..."
+
+#: includes/class-helper.php:89
+msgid "Search existing tags..."
+msgstr "Rechercher des étiquettes existantes..."
+
+#: includes/class-helper.php:90
+msgid "Sort by:"
+msgstr "Trier par :"
+
+#: templates/modal-template.php:21
+msgid "Select & Edit Tags"
+msgstr "Sélectionner et Modifier les Étiquettes"
+
+#: templates/modal-template.php:23
+msgid "Close"
+msgstr "Fermer"
+
 #: templates/modal-template.php:32
 msgid "Add New Tag"
 msgstr "Ajouter Nouvelle Étiquette"
@@ -76,6 +120,22 @@ msgstr "Rechercher des étiquettes existantes..."
 #: templates/modal-template.php:62
 msgid "Sort by:"
 msgstr "Trier par :"
+
+#: templates/modal-template.php:65
+msgid "Most Used First"
+msgstr "Plus Utilisées en Premier"
+
+#: templates/modal-template.php:66
+msgid "Least Used First"
+msgstr "Moins Utilisées en Premier"
+
+#: templates/modal-template.php:67
+msgid "Alphabetical A-Z"
+msgstr "Alphabétique A-Z"
+
+#: templates/modal-template.php:68
+msgid "Alphabetical Z-A"
+msgstr "Alphabétique Z-A"
 
 #: templates/modal-template.php:75
 msgid "Loading tags..."

@@ -26,6 +26,10 @@ msgstr ""
 msgid "Select & Edit Tags"
 msgstr ""
 
+#: enhanced-tag-selector.php:84
+msgid "♥ Support Me"
+msgstr ""
+
 #: includes/class-helper.php:67
 msgid "Alphabetical A-Z"
 msgstr ""
@@ -140,6 +144,22 @@ msgstr ""
 
 #: templates/modal-template.php:75
 msgid "Loading tags..."
+msgstr ""
+
+#: templates/modal-template.php:82
+msgid "Selected Tags"
+msgstr ""
+
+#: templates/modal-template.php:86
+msgid "Remove All"
+msgstr ""
+
+#: templates/modal-template.php:91
+msgid "No tags selected"
+msgstr ""
+
+#: templates/modal-template.php:97
+msgid "Add Tags"
 msgstr ""
 
 #: templates/modal-template.php:104

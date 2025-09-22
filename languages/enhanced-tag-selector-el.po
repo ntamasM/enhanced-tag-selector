@@ -21,6 +21,10 @@ msgstr ""
 msgid "Select & Edit Tags"
 msgstr "Επιλογή & Επεξεργασία Ετικετών"
 
+#: enhanced-tag-selector.php:84
+msgid "♥ Support Me"
+msgstr "♥ Υποστήριξέ με"
+
 #: includes/class-helper.php:67
 msgid "Alphabetical A-Z"
 msgstr "Αλφαβητικά Α-Ω"

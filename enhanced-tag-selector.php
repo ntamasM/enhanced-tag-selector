@@ -2,10 +2,11 @@
 
 /**
  * Plugin Name: Enhanced Tag Selector
- * Plugin URI: https://github.com/your-username/enhanced-tag-selector
+ * Plugin URI: https://github.com/ntamasM/enhanced-tag-selector
  * Description: Replaces the default "Choose from the most used tags" with an enhanced tag selector featuring sorting options and intelligent selection management.
  * Version: 0.0.1
  * Author: Ntamas
+ * Author URI: https://ntamadakis.gr
  * License: GPL v2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: enhanced-tag-selector
@@ -57,6 +58,9 @@ class Enhanced_Tag_Selector
         add_action('wp_ajax_ets_get_tags', array('ETS_Helper', 'ajax_get_tags'));
         add_action('admin_footer', array($this, 'add_enhanced_tag_selector'));
 
+        // Add support me button to plugins page
+        add_filter('plugin_action_links_' . plugin_basename(__FILE__), array($this, 'add_support_me_link'));
+
         // Don't remove the tag metabox - let WordPress handle it normally
         // Our JavaScript will add the enhanced functionality to the existing metabox
     }
@@ -70,6 +74,16 @@ class Enhanced_Tag_Selector
         }
 
         ETS_Helper::get_modal_template();
+    }
+
+    /**
+     * Add support me link to plugin action links
+     */
+    public function add_support_me_link($links)
+    {
+        $support_link = '<a href="https://ntamadakis.gr/support-me" target="_blank" style="color: #e74c3c; font-weight: bold;">' . __('♥ Support Me', 'enhanced-tag-selector') . '</a>';
+        array_unshift($links, $support_link);
+        return $links;
     }
 }
 
