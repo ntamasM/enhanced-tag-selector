@@ -49,6 +49,10 @@ msgstr "Rechercher des étiquettes..."
 msgid "No tags found"
 msgstr "Aucune étiquette trouvée"
 
+#: includes/class-helper.php:72b
+msgid "No tag found. You want to create a tag like this?"
+msgstr "Aucune étiquette trouvée. Voulez-vous créer une étiquette comme celle-ci ?"
+
 #: includes/class-helper.php:73
 msgid "No tags selected for this post"
 msgstr "Aucune étiquette sélectionnée pour cet article"

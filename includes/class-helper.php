@@ -46,7 +46,7 @@ class ETS_Helper
 
         // Use filemtime for development to prevent caching issues
         $js_version = defined('WP_DEBUG') && WP_DEBUG ?
-            filemtime(ETS_PLUGIN_PATH . 'assets/js/enhanced-tag-selector.js') :
+            time() :  // Force cache refresh with current timestamp
             ETS_VERSION;
 
         wp_enqueue_script(
@@ -88,7 +88,6 @@ class ETS_Helper
                 'most_used_asc' => __('Least Used First', 'enhanced-tag-selector'),
                 'most_used_desc' => __('Most Used First', 'enhanced-tag-selector'),
                 'search_tags' => __('Search tags...', 'enhanced-tag-selector'),
-                'no_tags_found' => __('No tags found', 'enhanced-tag-selector'),
                 'no_tags_selected' => __('No tags selected for this post', 'enhanced-tag-selector'),
                 'close' => __('Close', 'enhanced-tag-selector'),
                 'clear_search' => __('Clear search', 'enhanced-tag-selector'),
@@ -96,13 +95,12 @@ class ETS_Helper
                 'no_tags_assigned' => __('No tags assigned to this post', 'enhanced-tag-selector'),
                 'current_post_tags' => __('Current Post Tags', 'enhanced-tag-selector'),
                 'add_new_tag' => __('Add New Tag', 'enhanced-tag-selector'),
+                'no_tag_found_create' => __('No tag found. You want to create a tag like this?', 'enhanced-tag-selector'),
                 'create_add' => __('Create & Add', 'enhanced-tag-selector'),
                 'enter_tag_names' => __('Enter new tag name(s), separated by commas...', 'enhanced-tag-selector'),
                 'search_existing_tags' => __('Search existing tags...', 'enhanced-tag-selector'),
                 'sort_by' => __('Sort by:', 'enhanced-tag-selector'),
                 'select_a_tag' => __('Select a tag', 'enhanced-tag-selector'),
-                'filter_sort_explanation' => __('Use the search box to find specific tags or change the sorting order to organize how tags are displayed.', 'enhanced-tag-selector'),
-                'create_new_tag_explanation' => __('Create and add new tags that don\'t exist yet. Enter tag names separated by commas.', 'enhanced-tag-selector'),
                 'current_tags_explanation' => __('Tags currently assigned to this post. You can remove tags by clicking the × button next to each tag.', 'enhanced-tag-selector')
             )
         ));

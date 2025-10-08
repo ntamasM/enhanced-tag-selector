@@ -4,7 +4,7 @@
  * Plugin Name: Enhanced Tag Selector
  * Plugin URI: https://github.com/ntamasM/enhanced-tag-selector
  * Description: Replaces the default "Choose from the most used tags" with an enhanced tag selector featuring sorting options and intelligent selection management.
- * Version: 0.0.1
+ * Version: 0.1.0
  * Author: Ntamas
  * Author URI: https://ntamadakis.gr
  * License: GPLv2 or later
@@ -39,7 +39,7 @@ if (!defined('ABSPATH')) {
 }
 
 // Define plugin constants
-define('ETS_VERSION', '0.0.1');
+define('ETS_VERSION', '0.0.3');
 define('ETS_PLUGIN_URL', plugin_dir_url(__FILE__));
 define('ETS_PLUGIN_PATH', plugin_dir_path(__FILE__));
 

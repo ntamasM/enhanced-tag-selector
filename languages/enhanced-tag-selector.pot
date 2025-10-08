@@ -1,154 +1,450 @@
-# SOME DESCRIPTIVE TITLE.
+# SOME DESCRIPTIVE TITLE.# SOME DESCRIPTIVE TITLE.# SOME DESCRIPTIVE TITLE.
+
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the Enhanced Tag Select#: includes/class-helper.php:104
-msgid "Create and add new tags that don't exist yet. Enter tag names separated by commas."
-msgstr ""
 
-#: includes/class-helper.php:105ckage.
+# This file is distributed under the same license as the Enhanced Tag Selector package.# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+
+## This file is distributed under the same license as the Enhanced Tag Selector package.# This file is distributed under the same license as the Enhanced Tag Select#: includes/class-helper.php:104
+
 #, fuzzy
-msgid ""
+
+msgid ""# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.msgid "Create and add new tags that don't exist yet. Enter tag names separated by commas."
+
 msgstr ""
-"Project-Id-Version: Enhanced Tag Selector 1.0.0\n"
+
+"Project-Id-Version: Enhanced Tag Selector 1.0.0\n"#msgstr ""
+
 "Report-Msgid-Bugs-To: https://github.com/your-username/enhanced-tag-selector\n"
-"POT-Creation-Date: 2025-09-19 12:00+0000\n"
+
+"POT-Creation-Date: 2025-10-08 12:00+0000\n"#, fuzzy
+
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"msgid ""#: includes/class-helper.php:105ckage.
+
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+
+"Language: \n"msgstr ""# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+
+"Content-Type: text/plain; charset=UTF-8\n""Project-Id-Version: Enhanced Tag Selector 1.0.0\n"#
+
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: includes/class-helper.php:66
-msgid "Select & Edit Tags"
-msgstr ""
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n""Report-Msgid-Bugs-To: https://github.com/your-username/enhanced-tag-selector\n"#, fuzzy
 
-#: enhanced-tag-selector.php:84
+
+
+#: enhanced-tag-selector.php:84"POT-Creation-Date: 2025-10-08 12:00+0000\n"msgid ""
+
 msgid "♥ Support Me"
-msgstr ""
 
-#: includes/class-helper.php:67
-msgid "Alphabetical A-Z"
-msgstr ""
+msgstr """PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"msgstr ""
 
-#: includes/class-helper.php:68
-msgid "Alphabetical Z-A"
-msgstr ""
 
-#: includes/class-helper.php:69
-msgid "Least Used First"
-msgstr ""
 
-#: includes/class-helper.php:70
-msgid "Most Used First"
-msgstr ""
+#: includes/class-helper.php:83"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n""Project-Id-Version: Enhanced Tag Selector 1.0.0\n"
 
-#: includes/class-helper.php:71
-msgid "Search tags..."
-msgstr ""
-
-#: includes/class-helper.php:72
-msgid "No tags found"
-msgstr ""
-
-#: includes/class-helper.php:73
-msgid "No tags selected for this post"
-msgstr ""
-
-#: includes/class-helper.php:74
-msgid "Close"
-msgstr ""
-
-#: includes/class-helper.php:75
-msgid "Clear search"
-msgstr ""
-
-#: includes/class-helper.php:76
-msgid "Loading tags..."
-msgstr ""
-
-#: includes/class-helper.php:77
-msgid "No tags assigned to this post"
-msgstr ""
-
-#: includes/class-helper.php:84
-msgid "Current Post Tags"
-msgstr ""
-
-#: includes/class-helper.php:86
-msgid "Add New Tag"
-msgstr ""
-
-#: includes/class-helper.php:87
-msgid "Create & Add"
-msgstr ""
-
-#: includes/class-helper.php:88
-msgid "Enter new tag name(s), separated by commas..."
-msgstr ""
-
-#: includes/class-helper.php:89
-msgid "Search existing tags..."
-msgstr ""
-
-#: includes/class-helper.php:90
-msgid "Sort by:"
-msgstr ""
-
-#: templates/modal-template.php:21
 msgid "Select & Edit Tags"
-msgstr ""
 
-#: templates/modal-template.php:23
-msgid "Close"
-msgstr ""
+msgstr """Language-Team: LANGUAGE <LL@li.org>\n""Report-Msgid-Bugs-To: https://github.com/your-username/enhanced-tag-selector\n"
 
-#: templates/modal-template.php:32
-msgid "Add New Tag"
-msgstr ""
 
-#: templates/modal-template.php:38
-msgid "Enter new tag name(s), separated by commas..."
-msgstr ""
 
-#: templates/modal-template.php:41
-msgid "Create & Add"
-msgstr ""
+#: includes/class-helper.php:84"Language: \n""POT-Creation-Date: 2025-09-19 12:00+0000\n"
 
-#: templates/modal-template.php:54
-msgid "Search existing tags..."
-msgstr ""
-
-#: templates/modal-template.php:62
-msgid "Sort by:"
-msgstr ""
-
-#: templates/modal-template.php:65
-msgid "Most Used First"
-msgstr ""
-
-#: templates/modal-template.php:66
-msgid "Least Used First"
-msgstr ""
-
-#: templates/modal-template.php:67
 msgid "Alphabetical A-Z"
-msgstr ""
 
-#: templates/modal-template.php:68
+msgstr """MIME-Version: 1.0\n""PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+
+
+
+#: includes/class-helper.php:85"Content-Type: text/plain; charset=UTF-8\n""Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+
 msgid "Alphabetical Z-A"
+
+msgstr """Content-Transfer-Encoding: 8bit\n""Language-Team: LANGUAGE <LL@li.org>\n"
+
+
+
+#: includes/class-helper.php:86"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n""Language: \n"
+
+msgid "Least Used First"
+
+msgstr """MIME-Version: 1.0\n"
+
+
+
+#: includes/class-helper.php:87#: enhanced-tag-selector.php:84"Content-Type: text/plain; charset=UTF-8\n"
+
+msgid "Most Used First"
+
+msgstr ""msgid "♥ Support Me""Content-Transfer-Encoding: 8bit\n"
+
+
+
+#: includes/class-helper.php:88msgstr """Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+msgid "Search tags..."
+
 msgstr ""
 
-#: templates/modal-template.php:75
+
+
+#: includes/class-helper.php:89#: includes/class-helper.php:83#: includes/class-helper.php:66
+
+msgid "No tags selected for this post"
+
+msgstr ""msgid "Select & Edit Tags"msgid "Select & Edit Tags"
+
+
+
+#: includes/class-helper.php:90msgstr ""msgstr ""
+
+msgid "Close"
+
+msgstr ""
+
+
+
+#: includes/class-helper.php:91#: includes/class-helper.php:84#: enhanced-tag-selector.php:84
+
+msgid "Clear search"
+
+msgstr ""msgid "Alphabetical A-Z"msgid "♥ Support Me"
+
+
+
+#: includes/class-helper.php:92msgstr ""msgstr ""
+
 msgid "Loading tags..."
+
 msgstr ""
 
-#: templates/modal-template.php:82
-msgid "Selected Tags"
+
+
+#: includes/class-helper.php:93#: includes/class-helper.php:85#: includes/class-helper.php:67
+
+msgid "No tags assigned to this post"
+
+msgstr ""msgid "Alphabetical Z-A"msgid "Alphabetical A-Z"
+
+
+
+#: includes/class-helper.php:94msgstr ""msgstr ""
+
+msgid "Current Post Tags"
+
 msgstr ""
+
+
+
+#: includes/class-helper.php:95#: includes/class-helper.php:86#: includes/class-helper.php:68
+
+msgid "Add New Tag"
+
+msgstr ""msgid "Least Used First"msgid "Alphabetical Z-A"
+
+
+
+#: includes/class-helper.php:96msgstr ""msgstr ""
+
+msgid "Create & Add"
+
+msgstr ""
+
+
+
+#: includes/class-helper.php:97#: includes/class-helper.php:87#: includes/class-helper.php:69
+
+msgid "Enter new tag name(s), separated by commas..."
+
+msgstr ""msgid "Most Used First"msgid "Least Used First"
+
+
+
+#: includes/class-helper.php:98msgstr ""msgstr ""
+
+msgid "Search existing tags..."
+
+msgstr ""
+
+
+
+#: includes/class-helper.php:99#: includes/class-helper.php:88#: includes/class-helper.php:70
+
+msgid "Sort by:"
+
+msgstr ""msgid "Search tags..."msgid "Most Used First"
+
+
+
+#: includes/class-helper.php:100msgstr ""msgstr ""
+
+msgid "Select a tag"
+
+msgstr ""
+
+
+
+#: includes/class-helper.php:101#: includes/class-helper.php:89#: includes/class-helper.php:71
+
+msgid "Tags currently assigned to this post. You can remove tags by clicking the × button next to each tag."
+
+msgstr ""msgid "No tags found"msgid "Search tags..."
+
+
+
+#: templates/modal-template.php:21msgstr ""msgstr ""
+
+msgid "Select & Edit Tags"
+
+msgstr ""
+
+
+
+#: templates/modal-template.php:23#: includes/class-helper.php:90#: includes/class-helper.php:72
+
+msgid "Close"
+
+msgstr ""msgid "No tags selected for this post"msgid "No tags found"
+
+
+
+#: templates/modal-template.php:32msgstr ""msgstr ""
+
+msgid "Select a tag"
+
+msgstr ""
+
+
+
+#: templates/modal-template.php:39#: includes/class-helper.php:91#: includes/class-helper.php:73
+
+msgid "Search existing tags..."
+
+msgstr ""msgid "Close"msgid "No tags selected for this post"
+
+
+
+#: templates/modal-template.php:47msgstr ""msgstr ""
+
+msgid "Sort by:"
+
+msgstr ""
+
+
+
+#: templates/modal-template.php:49#: includes/class-helper.php:92#: includes/class-helper.php:74
+
+msgid "Most Used First"
+
+msgstr ""msgid "Clear search"msgid "Close"
+
+
+
+#: templates/modal-template.php:50msgstr ""msgstr ""
+
+msgid "Least Used First"
+
+msgstr ""
+
+
+
+#: templates/modal-template.php:51#: includes/class-helper.php:93#: includes/class-helper.php:75
+
+msgid "Alphabetical A-Z"
+
+msgstr ""msgid "Loading tags..."msgid "Clear search"
+
+
+
+#: templates/modal-template.php:52msgstr ""msgstr ""
+
+msgid "Alphabetical Z-A"
+
+msgstr ""
+
+
+
+#: templates/modal-template.php:59#: includes/class-helper.php:94#: includes/class-helper.php:76
+
+msgid "Loading tags..."
+
+msgstr ""msgid "No tags assigned to this post"msgid "Loading tags..."
+
+
+
+#: templates/modal-template.php:66msgstr ""msgstr ""
+
+msgid "Current Post Tags"
+
+msgstr ""
+
+
+
+#: templates/modal-template.php:71#: includes/class-helper.php:95#: includes/class-helper.php:77
+
+msgid "No tags assigned to this post"
+
+msgstr ""msgid "Current Post Tags"msgid "No tags assigned to this post"
+
+msgstr ""msgstr ""
+
+
+
+#: includes/class-helper.php:96#: includes/class-helper.php:84
+
+msgid "Add New Tag"msgid "Current Post Tags"
+
+msgstr ""msgstr ""
+
+
+
+#: includes/class-helper.php:97#: includes/class-helper.php:86
+
+msgid "Create & Add"msgid "Add New Tag"
+
+msgstr ""msgstr ""
+
+
+
+#: includes/class-helper.php:98#: includes/class-helper.php:87
+
+msgid "Enter new tag name(s), separated by commas..."msgid "Create & Add"
+
+msgstr ""msgstr ""
+
+
+
+#: includes/class-helper.php:99#: includes/class-helper.php:88
+
+msgid "Search existing tags..."msgid "Enter new tag name(s), separated by commas..."
+
+msgstr ""msgstr ""
+
+
+
+#: includes/class-helper.php:100#: includes/class-helper.php:89
+
+msgid "Sort by:"msgid "Search existing tags..."
+
+msgstr ""msgstr ""
+
+
+
+#: includes/class-helper.php:101#: includes/class-helper.php:90
+
+msgid "Select a tag"msgid "Sort by:"
+
+msgstr ""msgstr ""
+
+
+
+#: includes/class-helper.php:102#: templates/modal-template.php:21
+
+msgid "Tags currently assigned to this post. You can remove tags by clicking the × button next to each tag."msgid "Select & Edit Tags"
+
+msgstr ""msgstr ""
+
+
+
+#: templates/modal-template.php:21#: templates/modal-template.php:23
+
+msgid "Select & Edit Tags"msgid "Close"
+
+msgstr ""msgstr ""
+
+
+
+#: templates/modal-template.php:23#: templates/modal-template.php:32
+
+msgid "Close"msgid "Add New Tag"
+
+msgstr ""msgstr ""
+
+
+
+#: templates/modal-template.php:32#: templates/modal-template.php:38
+
+msgid "Select a tag"msgid "Enter new tag name(s), separated by commas..."
+
+msgstr ""msgstr ""
+
+
+
+#: templates/modal-template.php:39#: templates/modal-template.php:41
+
+msgid "Search existing tags..."msgid "Create & Add"
+
+msgstr ""msgstr ""
+
+
+
+#: templates/modal-template.php:47#: templates/modal-template.php:54
+
+msgid "Sort by:"msgid "Search existing tags..."
+
+msgstr ""msgstr ""
+
+
+
+#: templates/modal-template.php:49#: templates/modal-template.php:62
+
+msgid "Most Used First"msgid "Sort by:"
+
+msgstr ""msgstr ""
+
+
+
+#: templates/modal-template.php:50#: templates/modal-template.php:65
+
+msgid "Least Used First"msgid "Most Used First"
+
+msgstr ""msgstr ""
+
+
+
+#: templates/modal-template.php:51#: templates/modal-template.php:66
+
+msgid "Alphabetical A-Z"msgid "Least Used First"
+
+msgstr ""msgstr ""
+
+
+
+#: templates/modal-template.php:52#: templates/modal-template.php:67
+
+msgid "Alphabetical Z-A"msgid "Alphabetical A-Z"
+
+msgstr ""msgstr ""
+
+
+
+#: templates/modal-template.php:59#: templates/modal-template.php:68
+
+msgid "Loading tags..."msgid "Alphabetical Z-A"
+
+msgstr ""msgstr ""
+
+
+
+#: templates/modal-template.php:66#: templates/modal-template.php:75
+
+msgid "Current Post Tags"msgid "Loading tags..."
+
+msgstr ""msgstr ""
+
+
+
+#: templates/modal-template.php:71#: templates/modal-template.php:82
+
+msgid "No tags assigned to this post"msgid "Selected Tags"
+
+msgstr ""msgstr ""
 
 #: templates/modal-template.php:86
 msgid "Remove All"

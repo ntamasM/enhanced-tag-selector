@@ -26,31 +26,6 @@ if (!defined('ABSPATH')) {
         </div>
         <div class="ets-modal-body">
 
-            <!-- Add New Tag Section -->
-            <div class="ets-new-tag-section">
-                <div class="ets-section-header">
-                    <h4>
-                        <span class="ets-icon ets-icon-plus"></span>
-                        <?php _e('Add New Tag', 'enhanced-tag-selector'); ?>
-                        <span class="ets-tooltip-trigger" data-tooltip="<?php esc_attr_e('Create and add new tags that don\'t exist yet. Enter tag names separated by commas.', 'enhanced-tag-selector'); ?>">
-                            <span class="ets-icon ets-icon-info"></span>
-                        </span>
-                    </h4>
-                </div>
-                <div class="ets-section-content">
-                    <div class="ets-new-tag-input">
-                        <div class="ets-input-wrapper">
-                            <span class="ets-icon ets-icon-tag"></span>
-                            <input type="text" id="ets-new-tag" placeholder="<?php _e('Enter new tag name(s), separated by commas...', 'enhanced-tag-selector'); ?>" />
-                        </div>
-                        <button id="ets-create-tag" class="ets-create-tag-btn" type="button">
-                            <span class="ets-icon ets-icon-plus-circle"></span>
-                            <?php _e('Create & Add', 'enhanced-tag-selector'); ?>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
             <!-- Search, Filter and Results Section -->
             <div class="ets-controls-section">
                 <div class="ets-section-header">

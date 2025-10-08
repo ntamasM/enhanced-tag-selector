@@ -11,6 +11,7 @@ jQuery(document).ready(function ($) {
 
   // Debug: Log translation information
   console.log("Enhanced Tag Selector Debug Info:");
+  console.log("Version: 0.0.3 - Updated Add New Tag UI");
   console.log(
     "Locale:",
     ets_ajax.debug_info ? ets_ajax.debug_info.locale : "debug_info not found"
@@ -99,23 +100,31 @@ jQuery(document).ready(function ($) {
           self.closeModal();
         }
       });
+    },
+
+    bindNewTagEvents: function () {
+      var self = this;
 
       // Create New Tag button
-      $("#ets-create-tag").on("click", function (e) {
-        if (e.target === this) {
-          console.log("Create Tag button clicked");
-          self.createNewTag();
-        }
-      });
+      $("#ets-create-tag")
+        .off("click")
+        .on("click", function (e) {
+          if (e.target === this) {
+            console.log("Create Tag button clicked");
+            self.createNewTag();
+          }
+        });
 
       // Enter key on new tag input
-      $("#ets-new-tag").on("keypress", function (e) {
-        if (e.which === 13) {
-          // Enter key
-          e.preventDefault();
-          self.createNewTag();
-        }
-      });
+      $("#ets-new-tag")
+        .off("keypress")
+        .on("keypress", function (e) {
+          if (e.which === 13) {
+            // Enter key
+            e.preventDefault();
+            self.createNewTag();
+          }
+        });
     },
 
     replaceDefaultTagInterface: function () {
@@ -142,7 +151,7 @@ jQuery(document).ready(function ($) {
         var customInterface =
           '<div class="ets-custom-interface">' +
           '<div id="ets-current-tags-display" class="ets-current-tags-display">' +
-          '<p class="ets-no-tags-message">' +
+          '<p class="ets-empty-state-message">' +
           (ets_ajax.labels.no_tags_selected ||
             "No tags selected for this post") +
           "</p>" +
@@ -190,7 +199,7 @@ jQuery(document).ready(function ($) {
             "</button>" +
             "</div>" +
             '<div id="ets-current-tags-display" class="ets-current-tags-display">' +
-            '<p class="ets-no-tags-message">' +
+            '<p class="ets-empty-state-message">' +
             (ets_ajax.labels.no_tags_selected ||
               "No tags selected for this post") +
             "</p>" +
@@ -403,14 +412,49 @@ jQuery(document).ready(function ($) {
     renderTags: function (tags) {
       var self = this; // Store context
       var $container = $("#ets-tags-container");
+      var searchTerm = $("#ets-search").val().trim();
+
+      console.log("renderTags called with tags.length:", tags.length);
+      console.log("Available labels:", ets_ajax.labels);
 
       if (tags.length === 0) {
-        $container.html(
-          '<div class="ets-no-tags">' + ets_ajax.labels.no_tags_found + "</div>"
-        );
+        console.log("No tags found, rendering add new tag interface");
+        // Always show add new tag option when no tags are found (without wrapper div)
+        var addNewTagHTML =
+          '<div class="ets-add-new-tag-section">' +
+          '<h4 class="ets-new-tag-title">' +
+          '<span class="ets-icon ets-icon-plus"></span>' +
+          (ets_ajax.labels.no_tag_found_create ||
+            "No tag found. You want to create a tag like this?") +
+          "</h4>" +
+          '<div class="ets-section-content">' +
+          '<div class="ets-new-tag-input">' +
+          '<div class="ets-input-wrapper">' +
+          '<span class="ets-icon ets-icon-tag"></span>' +
+          '<input type="text" id="ets-new-tag" value="' +
+          searchTerm +
+          '" placeholder="' +
+          (ets_ajax.labels.enter_tag_names ||
+            "Enter new tag name(s), separated by commas...") +
+          '" />' +
+          "</div>" +
+          '<button id="ets-create-tag" class="ets-create-tag-btn" type="button">' +
+          (ets_ajax.labels.create_add || "Create & Add") +
+          "</button>" +
+          "</div>" +
+          "</div>" +
+          "</div>";
+
+        console.log("Setting HTML to:", addNewTagHTML);
+        $container.html(addNewTagHTML);
+
+        // Bind events for the new tag creation
+        self.bindNewTagEvents();
+
         return;
       }
 
+      console.log("Rendering", tags.length, "tags");
       var html = '<div class="ets-tags-grid">';
       tags.forEach(function (tag) {
         // Check if tag is already added to the post
@@ -686,7 +730,7 @@ jQuery(document).ready(function ($) {
       if (this.selectedTags.length === 0) {
         // Show "no tags" message
         $customDisplay.html(
-          '<p class="ets-no-tags-message">' +
+          '<p class="ets-empty-state-message">' +
             (ets_ajax.labels.no_tags_selected ||
               "No tags selected for this post") +
             "</p>"
@@ -880,6 +924,12 @@ jQuery(document).ready(function ($) {
 
       // Clear the input
       $newTagInput.val("");
+
+      // Clear the search field and reload tags if tags were successfully added
+      if (addedTags.length > 0) {
+        $("#ets-search").val("");
+        self.loadTags(); // Refresh the tags display
+      }
 
       // Log results
       if (addedTags.length > 0 && skippedTags.length === 0) {
