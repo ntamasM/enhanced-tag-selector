@@ -22,29 +22,14 @@
 .ets-icon-sort::before {
   content: "↕️";
 }
-.ets-icon-tags::before {
-  content: "🏷️";
-}
 .ets-icon-tag::before {
   content: "🏷️";
 }
 .ets-icon-plus::before {
   content: "➕";
 }
-.ets-icon-plus-circle::before {
-  content: "⊕";
-}
 .ets-icon-close::before {
   content: "✕";
-}
-.ets-icon-check-circle::before {
-  content: "✓";
-}
-.ets-icon-trash::before {
-  content: "🗑️";
-}
-.ets-icon-save::before {
-  content: "💾";
 }
 .ets-icon-document::before {
   content: "📄";
@@ -193,6 +178,10 @@
   color: #0073aa;
 }
 
+.ets-section-content {
+  padding: 15px;
+}
+
 /* Tooltip styling */
 .ets-tooltip-trigger {
   position: relative;
@@ -253,18 +242,6 @@
 .ets-tooltip-trigger:hover::before {
   opacity: 1;
   visibility: visible;
-}
-
-.ets-section-explanation {
-  margin: 0;
-  font-size: 13px;
-  color: #6c757d;
-  line-height: 1.4;
-  font-style: italic;
-}
-
-.ets-section-content {
-  padding: 15px;
 }
 
 /* Controls specific styling */
@@ -445,6 +422,27 @@
   color: #1976d2;
 }
 
+/* Tag Items Styling for Already Added Tags */
+.ets-tag-item.ets-tag-added {
+  background: #28a745;
+  border-color: #1e7e34;
+  color: white;
+}
+
+.ets-tag-item.ets-tag-added:hover {
+  background: #218838;
+  border-color: #1c7430;
+}
+
+.ets-tag-item.ets-tag-added .ets-tag-name {
+  color: white;
+}
+
+.ets-tag-item.ets-tag-added .ets-tag-count {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
 /* Loading and Error States */
 .ets-loading,
 .ets-error {
@@ -488,7 +486,7 @@
   border-radius: 4px;
 }
 
-/* Add New Tag Section (no wrapper) */
+/* Add New Tag Section */
 .ets-add-new-tag-section {
   background: #fff;
   border: 1px solid #ddd;
@@ -497,7 +495,7 @@
   margin: 0;
 }
 
-.ets-add-new-tag-section .ets-section-header h4 {
+.ets-new-tag-title {
   margin: 0 0 15px 0;
   font-size: 14px;
   font-weight: 600;
@@ -506,35 +504,27 @@
   align-items: center;
 }
 
-.ets-new-tag-title {
-  margin: 0 0 15px 0;
-}
-
-.ets-add-new-tag-section .ets-section-content {
-  padding: 0;
-}
-
-.ets-add-new-tag-section .ets-new-tag-input {
+.ets-new-tag-input {
   display: flex;
   gap: 10px;
   align-items: center;
 }
 
-.ets-add-new-tag-section .ets-input-wrapper {
+.ets-input-wrapper {
   flex: 1;
   position: relative;
   display: flex;
   align-items: center;
 }
 
-.ets-add-new-tag-section .ets-input-wrapper .ets-icon {
+.ets-input-wrapper .ets-icon {
   position: absolute;
   left: 10px;
   z-index: 1;
   color: #666;
 }
 
-.ets-add-new-tag-section .ets-input-wrapper input {
+.ets-input-wrapper input {
   width: 100%;
   padding: 8px 8px 8px 35px;
   border: 1px solid #ddd;
@@ -542,7 +532,7 @@
   font-size: 13px;
 }
 
-.ets-add-new-tag-section .ets-create-tag-btn {
+.ets-create-tag-btn {
   background: #0073aa;
   color: white;
   border: none;
@@ -558,178 +548,8 @@
   gap: 5px;
 }
 
-.ets-add-new-tag-section .ets-create-tag-btn:hover {
+.ets-create-tag-btn:hover {
   background: #005a87;
-}
-
-/* Feedback Messages */
-.ets-feedback {
-  padding: 8px 12px;
-  border-radius: 4px;
-  margin-bottom: 15px;
-  animation: etsFeedbackSlideIn 0.3s ease-out;
-}
-
-@keyframes etsFeedbackSlideIn {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.ets-feedback-success {
-  background: #e8f5e8;
-  color: #2e7d32;
-  border: 1px solid #c8e6c9;
-}
-
-.ets-feedback-error {
-  background: #ffebee;
-  color: #d32f2f;
-  border: 1px solid #ffcdd2;
-}
-
-.ets-feedback-warning {
-  background: #fff3e0;
-  color: #ef6c00;
-  border: 1px solid #ffcc02;
-}
-
-/* Trigger Link Styling */
-.ets-trigger {
-  color: #0073aa !important;
-  text-decoration: none !important;
-  font-weight: 500;
-  transition: color 0.2s ease;
-}
-
-.ets-trigger:hover,
-.ets-trigger:focus {
-  color: #005a87 !important;
-  text-decoration: underline !important;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .ets-modal-content {
-    width: 95%;
-    max-height: 90vh;
-    margin: 15px;
-  }
-
-  .ets-modal-header,
-  .ets-modal-body {
-    padding: 15px;
-  }
-
-  .ets-section-header {
-    padding: 10px 12px 6px 12px;
-  }
-
-  .ets-section-header h4 {
-    font-size: 15px;
-  }
-
-  /* Responsive tooltip adjustments */
-  .ets-tooltip-trigger::after {
-    max-width: 250px;
-    left: auto;
-    right: 0;
-    transform: none;
-  }
-
-  .ets-tooltip-trigger::before {
-    left: auto;
-    right: 15px;
-    transform: none;
-  }
-
-  .ets-section-explanation {
-    font-size: 12px;
-  }
-
-  .ets-section-content {
-    padding: 12px;
-  }
-
-  .ets-controls {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 12px;
-  }
-
-  .ets-search-area {
-    order: 1;
-    min-width: auto;
-  }
-
-  .ets-sort-container {
-    order: 2;
-    justify-content: space-between;
-    min-width: auto;
-  }
-
-  .ets-tags-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .ets-add-new-tag-section .ets-new-tag-input {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .ets-add-new-tag-section .ets-create-tag-btn {
-    width: 100%;
-    justify-content: center;
-  }
-}
-
-@media (max-width: 480px) {
-  .ets-modal-header h3 {
-    font-size: 16px;
-  }
-
-  .ets-tag-item {
-    padding: 10px 15px;
-  }
-
-  .ets-controls {
-    gap: 10px;
-  }
-}
-
-/* Tag Items Styling for Already Added Tags */
-.ets-tag-item.ets-tag-added {
-  background: #28a745;
-  border-color: #1e7e34;
-  color: white;
-}
-
-.ets-tag-item.ets-tag-added:hover {
-  background: #218838;
-  border-color: #1c7430;
-}
-
-.ets-tag-item.ets-tag-added .ets-tag-name {
-  color: white;
-}
-
-.ets-tag-item.ets-tag-added .ets-tag-count {
-  background: rgba(255, 255, 255, 0.2);
-  color: white;
-}
-
-/* Current Post Tags Styling */
-@media (max-width: 768px) {
-  .ets-selected-header {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 10px;
-  }
 }
 
 /* Current Post Tags */
@@ -795,33 +615,7 @@
   background: rgba(255, 255, 255, 0.2);
 }
 
-/* Enhanced responsive design for new elements */
-@media (max-width: 768px) {
-  .ets-new-tag-input {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .ets-create-tag-btn {
-    width: 100%;
-  }
-
-  .ets-current-tags-grid {
-    justify-content: center;
-  }
-}
-
-@media (max-width: 480px) {
-  .ets-current-tags-section {
-    margin-top: 15px;
-    padding-top: 10px;
-  }
-
-  .ets-current-post-tags {
-    padding: 8px;
-  }
-}
-
+/* Main button and custom interface */
 .ets-main-button-container {
   text-align: center;
   margin-bottom: 15px;
@@ -924,8 +718,80 @@
   gap: 15px;
 }
 
-/* Responsive design for custom interface */
+/* Responsive Design */
 @media (max-width: 768px) {
+  .ets-modal-content {
+    width: 95%;
+    max-height: 90vh;
+    margin: 15px;
+  }
+
+  .ets-modal-header,
+  .ets-modal-body {
+    padding: 15px;
+  }
+
+  .ets-section-header {
+    padding: 10px 12px 6px 12px;
+  }
+
+  .ets-section-header h4 {
+    font-size: 15px;
+  }
+
+  /* Responsive tooltip adjustments */
+  .ets-tooltip-trigger::after {
+    max-width: 250px;
+    left: auto;
+    right: 0;
+    transform: none;
+  }
+
+  .ets-tooltip-trigger::before {
+    left: auto;
+    right: 15px;
+    transform: none;
+  }
+
+  .ets-section-content {
+    padding: 12px;
+  }
+
+  .ets-controls {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .ets-search-area {
+    order: 1;
+    min-width: auto;
+  }
+
+  .ets-sort-container {
+    order: 2;
+    justify-content: space-between;
+    min-width: auto;
+  }
+
+  .ets-tags-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ets-new-tag-input {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .ets-create-tag-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .ets-current-tags-grid {
+    justify-content: center;
+  }
+
   .ets-custom-interface {
     padding: 15px;
   }
@@ -942,6 +808,27 @@
 }
 
 @media (max-width: 480px) {
+  .ets-modal-header h3 {
+    font-size: 16px;
+  }
+
+  .ets-tag-item {
+    padding: 10px 15px;
+  }
+
+  .ets-controls {
+    gap: 10px;
+  }
+
+  .ets-current-tags-section {
+    margin-top: 15px;
+    padding-top: 10px;
+  }
+
+  .ets-current-post-tags {
+    padding: 8px;
+  }
+
   .ets-custom-interface {
     padding: 10px;
   }

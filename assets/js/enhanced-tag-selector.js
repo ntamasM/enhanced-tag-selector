@@ -427,7 +427,6 @@ jQuery(document).ready(function ($) {
           (ets_ajax.labels.no_tag_found_create ||
             "No tag found. You want to create a tag like this?") +
           "</h4>" +
-          '<div class="ets-section-content">' +
           '<div class="ets-new-tag-input">' +
           '<div class="ets-input-wrapper">' +
           '<span class="ets-icon ets-icon-tag"></span>' +
@@ -441,7 +440,6 @@ jQuery(document).ready(function ($) {
           '<button id="ets-create-tag" class="ets-create-tag-btn" type="button">' +
           (ets_ajax.labels.create_add || "Create & Add") +
           "</button>" +
-          "</div>" +
           "</div>" +
           "</div>";
 
